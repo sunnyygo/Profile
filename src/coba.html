@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="gallery" class="bg-[#dae4fd] font-jakarta self-center w-full lg:h-screen">
+        <div class="mt-24 mx-auto flex flex-col text-center align-middle">
+            <div>
+                <h1 class="text-2xl font-semibold mb-6">Short Story Documentation</h1>
+            </div>
+            
+            <!-- Kontainer Galeri dengan Gambar Tersembunyi di Mobile -->
+            <div class="w-full grid grid-cols-2 gap-3 p-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+                
+                <!-- Gambar 1 -->
+                <div class="h-48 bg-blue-500 aspect-4/3 rounded-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="Story 1" class="w-full h-full object-cover">
+                </div>
+    
+                <!-- Gambar 2 -->
+                <div class="h-48 bg-blue-500 aspect-4/3 rounded-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="Story 2" class="w-full h-full object-cover">
+                </div>
+    
+                <!-- Gambar 3 -->
+                <div class="h-48 bg-blue-500 aspect-4/3 rounded-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="Story 3" class="w-full h-full object-cover">
+                </div>
+    
+                <!-- Gambar 4 -->
+                <div class="h-48 bg-blue-500 aspect-4/3 rounded-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="Story 4" class="w-full h-full object-cover">
+                </div>
+    
+                <!-- Gambar 5 -->
+                <div class="h-48 bg-blue-500 aspect-4/3 rounded-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="Story 5" class="w-full h-full object-cover">
+                </div>
+    
+                <!-- Gambar 6 -->
+                <div class="h-48 bg-blue-500 aspect-4/3 rounded-lg">
+                    <img src="https://via.placeholder.com/400x300" alt="Story 6" class="w-full h-full object-cover">
+                </div>
+    
+                <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+                
+            </div>
+            
+            <!-- Tombol Lihat Semua yang Muncul pada Tampilan Mobile -->
+            <div class="mt-4 md:hidden">
+                <button id="seeMoreBtn" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700">
+                    Lihat Semua
+                </button>
+            </div>
+    
+        </div>
+    
+        <!-- JavaScript untuk Menangani Tombol Lihat Semua -->
+        <script>
+            const seeMoreBtn = document.getElementById('seeMoreBtn');
+            const galleryItems = document.querySelectorAll('.grid > div');
+    
+            // Fungsi untuk toggle tampilan gambar
+            seeMoreBtn.addEventListener('click', () => {
+                galleryItems.forEach(item => {
+                    item.classList.remove('md:hidden');
+                });
+                seeMoreBtn.style.display = 'none'; // Sembunyikan tombol setelah klik
+            });
+        </script>
+    </section>
+    
+</body>
+</html>
